@@ -1,4 +1,7 @@
-CC = gcc
+CC := gcc
+FLAGS := -Wall -Wextra
 
-bf: bf.c
-	${CC} bf.c -o bf.out -std=c99
+NAME := bf
+
+${NAME}.out: ${NAME}.c
+	${CC} $^ -o $@ ${FLAGS}
